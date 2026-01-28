@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { FaHome } from "react-icons/fa";
 
 import "./styles/not_found.scss";
-import lendsqrLogo from "../../../../public/icons/union.svg";
+import lendsqrLogo from "/icons/union.svg?url";
 
 export default function NotFound() {
   const navigate = useNavigate();

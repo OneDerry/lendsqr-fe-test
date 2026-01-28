@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router";
 import "./styles/rootlayout.scss";
 
-import Sidenav from "../common/sidenav";
+import Sidenav from "../common/side_nav";
 import Header from "../common/header";
 
 const RootLayout = () => {

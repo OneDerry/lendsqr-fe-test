@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-import loginLogo from "../../../../public/left_logo.svg";
-import lendsqrLogo from "../../../../public/icons/union.svg";
+import lendsqrLogo from "/icons/union.svg?url";
 
 import "../styles/login.scss";
 
@@ -39,7 +38,7 @@ export default function Login() {
         <div className="login__illustration">
           <img
             className="login__illustrationImg"
-            src={loginLogo}
+            src="/left_logo.svg"
             alt="Login illustration"
           />
         </div>

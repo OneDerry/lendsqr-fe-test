@@ -1,7 +1,7 @@
-import user from "../../../../public/icons/stat_user.svg";
-import users from "../../../../public/icons/stat_users.svg";
-import loan from "../../../../public/icons/stat_loan.svg";
-import coin from "../../../../public/icons/stat_coins.svg";
+import user from "/icons/stat_user.svg?url";
+import users from "/icons/stat_users.svg?url";
+import loan from "/icons/stat_loan.svg?url";
+import coin from "/icons/stat_coins.svg?url";
 
 export default function UserStats() {
   return (

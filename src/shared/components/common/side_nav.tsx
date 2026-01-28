@@ -279,7 +279,7 @@ export default function Sidenav() {
             <button
               key={item.id}
               className={`sidenav__item ${activeItem === item.id ? "sidenav__item--active" : ""}`}
-              onClick={() => handleNavigation(item)}
+              onClick={() => navigate("/login")}
             >
               {item.icon.includes(".svg") ? (
                 <img

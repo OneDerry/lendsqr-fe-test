@@ -163,9 +163,41 @@
     cursor: pointer;
     border-radius: $radius-md;
     transition: background 0.2s ease;
+    position: relative;
 
     &:hover {
       background: $background-light;
+    }
+  }
+
+  &__userDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: $background-white;
+    border: 1px solid #e5e7eb;
+    border-radius: $radius-md;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 140px;
+    margin-top: 8px;
+    overflow: hidden;
+
+    button {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: $font-size-sm;
+      color: $text-primary;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: $background-light;
+        color: $primary-color;
+      }
     }
   }
 
@@ -195,5 +227,94 @@
     color: $text-primary;
     cursor: pointer;
     padding: 2px;
+  }
+}
+
+.signoutModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  &__content {
+    position: relative;
+    background: $background-white;
+    border-radius: $radius-lg;
+    padding: 32px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    h2 {
+      font-size: 24px;
+      font-weight: $font-weight-semibold;
+      color: $text-primary;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: $font-size-sm;
+      color: $text-muted;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: 12px 24px;
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+
+    &--cancel {
+      background: $background-light;
+      color: $text-primary;
+
+      &:hover {
+        background: #e5e7eb;
+      }
+    }
+
+    &--confirm {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+
+      &:hover {
+        background: darken($primary-color, 10%);
+      color: $background-white;
+
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
   }
 }

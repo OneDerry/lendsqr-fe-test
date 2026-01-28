@@ -178,7 +178,7 @@ export default function ViewUser() {
       <section className="view-user__section view-user__section--white">
         <div className="view-user__tab-content">
           {activeTab === "general" && (
-            <div className="view-user__details">
+            <div>
               <div className="view-user__detail-section">
                 <h3>Personal Information</h3>
                 <div className="view-user__detail-section__content">
@@ -243,8 +243,12 @@ export default function ViewUser() {
                     <span>{user.email}</span>
                   </div>
                   <div className="view-user__detail-row">
-                    <span>Office Phone</span>
-                    <span>{user.phone}</span>
+                    <span>Monthly Income</span>
+                    <span>{user.monthlyRevenue}</span>
+                  </div>
+                  <div className="view-user__detail-row">
+                    <span>Loan Repayment</span>
+                    <span>{user.loanRepayment}</span>
                   </div>
                 </div>
               </div>
@@ -273,6 +277,29 @@ export default function ViewUser() {
 
               <div className="view-user__detail-section">
                 <h3>Guarantor</h3>
+                <div className="view-user__detail-section__content">
+                  <div className="view-user__detail-row">
+                    <span>Full Name</span>
+                    <span>John Doe</span>
+                  </div>
+                  <div className="view-user__detail-row">
+                    <span>Phone Number</span>
+                    <span>08012345678</span>
+                  </div>
+                  <div className="view-user__detail-row">
+                    <span>Email Address</span>
+                    <span>johndoe@example.com</span>
+                  </div>
+                  <div className="view-user__detail-row">
+                    <span>Relationship</span>
+                    <span>Brother</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="view-user__separator view-user__separator--horizontal" />
+
+              <div className="view-user__detail-section">
                 <div className="view-user__detail-section__content">
                   <div className="view-user__detail-row">
                     <span>Full Name</span>
