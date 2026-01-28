@@ -1,0 +1,275 @@
+@use "../../../styles/variables" as *;
+
+.view-user {
+  &__back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $text-primary;
+    cursor: pointer;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #213f7d;
+      margin: 0;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__tab {
+    background: none;
+    border: none;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #545f7d;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #213f7d;
+    }
+
+    &--active {
+      color: #39cdcc;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #39cdcc;
+      }
+    }
+  }
+
+  &__tab-content {
+    padding: 24px 0;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #213f7d;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #545f7d;
+      font-size: 14px;
+    }
+  }
+
+  &__button-div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & > :first-child {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid $error-color;
+      color: $error-color;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    & > :last-child {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid $primary-color;
+      background: #fff;
+      color: $primary-color;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+
+  &__section {
+    margin-bottom: 32px;
+
+    &--white {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__profile-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px 24px 0 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__user-info {
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #213f7d;
+      // margin: 10px 0 8px 0;
+    }
+
+    p {
+      font-size: 10px;
+      color: #545f7d;
+      // margin: 0 0 12px 0;
+    }
+  }
+
+  &__status {
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+
+    &--active {
+      background: rgba(57, 205, 98, 0.1);
+      color: #39cd62;
+    }
+
+    &--inactive {
+      background: rgba(84, 95, 125, 0.1);
+      color: #545f7d;
+    }
+
+    &--pending {
+      background: rgba(245, 158, 11, 0.1);
+      color: #f59e0b;
+    }
+
+    &--blacklisted {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+    }
+  }
+
+  &__tier {
+
+    span:first-child {
+      font-size: 12px;
+      color: #545f7d;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+
+  &__tier-stars {
+    font-size: 20px;
+  }
+
+  &__details {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  &__details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__detail-section {
+    h3 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #545f7d;
+      margin: 0 0 16px 0;
+    }
+  }
+
+  &__detail-section__content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  &__detail-row {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span:first-child {
+      font-size: 10px;
+      color: #545f7d;
+      font-weight: 400;
+    }
+
+    span:last-child {
+      font-size: 12px;
+      color: #545f7d;
+      font-weight: 500;
+    }
+  }
+
+  &__separator {
+    background: #ebebf1;
+    margin: 16px 0;
+
+    &--horizontal {
+      height: 1px;
+      width: 100%;
+    }
+
+    &--vertical {
+      width: 1px;
+      height: 40px;
+      background: #ebebf1;
+      flex-shrink: 0;
+      align-self: center;
+    }
+  }
+}

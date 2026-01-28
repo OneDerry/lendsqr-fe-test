@@ -1,0 +1,85 @@
+@use "../../../../styles/variables" as *;
+
+.root-layout {
+  background: $gray-100;
+  padding: 24px;
+  min-height: 100vh;
+
+  &__sidenav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    width: 220px;
+    height: 100%;
+    background: #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    &--open {
+      transform: translateX(0);
+    }
+
+    @media (min-width: 1024px) {
+      transform: translateX(0);
+      width: 220px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 280px;
+      height: (calc(100% - 80px));
+      margin-top: 50px;
+    }
+  }
+
+  &__main {
+    background: $gray-100;
+    padding-top: 80px;
+
+    @media (min-width: 1024px) {
+      margin-left: 220px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-left: 280px;
+    }
+  }
+
+  &__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    @media (min-width: 1024px) {
+      width: calc(100%);
+    }
+
+    @media (min-width: 1280px) {
+      width: calc(100%);
+    }
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@use "../../../../styles/variables" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-lg;
+  background: $background-white;
+  box-shadow: $shadow-sm;
+
+  &__mobileToggle {
+    display: block;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: $text-primary;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $gray-100;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  &__logoIcon {
+    font-size: 24px;
+  }
+
+  &__logoText {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__search {
+    position: relative;
+    width: 400px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__searchInput {
+    width: 93.7%;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: $font-size-sm;
+    background: #f9fafb;
+
+    &::placeholder {
+      color: #9ca3af;
+      font-size: 12px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #39cdcc;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(57, 205, 204, 0.1);
+    }
+  }
+
+  &__searchBtn {
+    background: #39cdcc;
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    right: 0px;
+    border-radius: 0px 10px 10px 0px;
+    transform: translateY(-50%);
+
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #39cdcc;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+
+    @media (max-width: 768px) {
+      gap: $spacing-md;
+    }
+  }
+
+  &__link {
+    background: none;
+    border: none;
+    font-size: $font-size-sm;
+    color: $text-primary;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__bell {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  &__bellIcon {
+    font-size: 20px;
+    color: $text-primary;
+  }
+
+  &__bellBadge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: $error-color;
+    color: $background-white;
+    font-size: 10px;
+    font-weight: $font-weight-semibold;
+    padding: 2px 6px;
+    border-radius: $radius-full;
+    min-width: 16px;
+    text-align: center;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    cursor: pointer;
+    border-radius: $radius-md;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $background-light;
+    }
+  }
+
+  &__userDetails {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__userAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-full;
+    object-fit: cover;
+  }
+
+  &__userName {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+  }
+
+  &__userToggle {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: $text-primary;
+    cursor: pointer;
+    padding: 2px;
+  }
+}
