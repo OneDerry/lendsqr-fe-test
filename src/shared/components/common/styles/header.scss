@@ -1,9 +1,10 @@
 @use "../../../../styles/variables" as *;
 
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
   align-items: center;
-  justify-content: space-between;
+  gap: 40px;
   padding: $spacing-md $spacing-lg;
   background: $background-white;
   box-shadow: $shadow-sm;
@@ -31,21 +32,47 @@
     }
   }
 
+  &__hamburgerLogoIcon{
+     @media (max-width: 866px) {
+      display: none;
+    }
+  }
+
   &__logo {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 0 8px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__searchActions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-lg;
   }
 
   &__logoIcon {
     font-size: 24px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__logoText {
     font-size: 18px;
     font-weight: 600;
     color: $text-primary;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
   &__search {
@@ -53,7 +80,7 @@
     width: 400px;
 
     @media (max-width: 768px) {
-      display: none;
+      width: 100%;
     }
   }
 
@@ -99,12 +126,18 @@
     &:hover {
       color: #39cdcc;
     }
+
+    @media (max-width: 768px) {
+      width: 30%;
+      margin-left: 44px;
+    }
   }
 
   &__actions {
     display: flex;
     align-items: center;
     gap: $spacing-lg;
+    margin-right: 25px;
 
     @media (max-width: 768px) {
       gap: $spacing-md;
@@ -308,8 +341,7 @@
 
       &:hover {
         background: darken($primary-color, 10%);
-      color: $background-white;
-
+        color: $background-white;
       }
 
       &:active {

@@ -559,7 +559,7 @@ export default function Users() {
                   handleFilterChange("organization", e.target.value)
                 }
               >
-                <option value="">select</option>
+                <option value="">Select</option>
                 {getUniqueOrganizations().map((org) => (
                   <option key={org} value={org}>
                     {org}
@@ -572,7 +572,7 @@ export default function Users() {
               <label>Username</label>
               <input
                 type="text"
-                placeholder="user"
+                placeholder="User"
                 value={filters.username}
                 onChange={(e) => handleFilterChange("username", e.target.value)}
               />
@@ -581,7 +581,7 @@ export default function Users() {
               <label>Email</label>
               <input
                 type="email"
-                placeholder="email"
+                placeholder="Email"
                 value={filters.email}
                 onChange={(e) => handleFilterChange("email", e.target.value)}
               />
@@ -590,7 +590,7 @@ export default function Users() {
               <label>Phone Number</label>
               <input
                 type="tel"
-                placeholder="phone"
+                placeholder="Phone Number"
                 value={filters.phone}
                 onChange={(e) => handleFilterChange("phone", e.target.value)}
               />
@@ -600,7 +600,7 @@ export default function Users() {
               <input
                 type="date"
                 value={filters.date}
-                placeholder="date"
+                placeholder="Date"
                 onChange={(e) => handleFilterChange("date", e.target.value)}
               />
             </div>
@@ -610,7 +610,7 @@ export default function Users() {
                 value={filters.status}
                 onChange={(e) => handleFilterChange("status", e.target.value)}
               >
-                <option value="">select</option>
+                <option value="">Select</option>
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>
                 <option value="Pending">Pending</option>

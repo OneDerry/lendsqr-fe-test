@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import "./styles/sidenav.scss";
+import "./styles/side_nav.scss";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { LuUserRoundCog } from "react-icons/lu";
 
@@ -21,7 +21,7 @@ export default function Sidenav() {
   const customerItems = [
     {
       id: "users",
-      icon: "/icons/user-friends.svg",
+      icon: "/icons/user_friends.svg",
       label: "Users",
       path: "/users",
     },
@@ -52,13 +52,13 @@ export default function Sidenav() {
     },
     {
       id: "whitelist",
-      icon: "/icons/user-check.svg",
+      icon: "/icons/user_check.svg",
       label: "Whitelist",
       path: "/whitelist",
     },
     {
       id: "karma",
-      icon: "/icons/user-times.svg",
+      icon: "/icons/user_times.svg",
       label: "Karma",
       path: "/karma",
     },
@@ -103,7 +103,7 @@ export default function Sidenav() {
     },
     {
       id: "service-account",
-      icon: "/icons/user-cog.svg",
+      icon: "/icons/user_cog.svg",
       label: "Service Account",
       path: "/service-account",
     },
@@ -186,6 +186,7 @@ export default function Sidenav() {
             </div>
           )}
         </div>
+
         <div>
           {mainItem.map((item) => (
             <button
@@ -206,6 +207,7 @@ export default function Sidenav() {
             </button>
           ))}
         </div>
+
         <div className="sidenav__section">
           <div className="sidenav__sectionTitle">CUSTOMERS</div>
           {customerItems.map((item) => (
@@ -272,7 +274,7 @@ export default function Sidenav() {
           ))}
         </div>
 
-        <div className="view-user__separator view-user__separator--horizontal" />
+        <div className="sidenav__separator sidenav__separator--horizontal" />
 
         <div>
           {logoutItem.map((item) => (
