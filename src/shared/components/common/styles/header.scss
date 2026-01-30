@@ -81,7 +81,7 @@
     width: 400px;
 
     @media (max-width: 768px) {
-      width: 100%;
+      width: auto;
     }
   }
 
@@ -124,13 +124,12 @@
     align-items: center;
     justify-content: center;
 
-    &:hover {
-      color: #39cdcc;
+    @media (max-width: 768px) {
+      display: none;
     }
 
-    @media (max-width: 768px) {
-      width: 30%;
-      margin-left: 44px;
+    &:hover {
+      color: #39cdcc;
     }
   }
 
